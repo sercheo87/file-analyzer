@@ -9,6 +9,8 @@
 
 ## Overview
 
+Here's our awesome plugin on the JetBrains Marketplace: [File Analyzer](https://plugins.jetbrains.com/plugin/24340-file-analyzer)
+
 **An easy-to-use tool, Line Counter, that enhances your IDE with the capability to count lines in the currently selected
 file.**
 
