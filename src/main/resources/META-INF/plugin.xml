@@ -1,0 +1,60 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.sercheo.file-analyzer</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>File Analyzer</name>
+    <version>1.0</version>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="chancaysergio@gmail.com" url="https://github.com/sercheo87">Sercheo</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+        <b>An easy-to-use tool, Line Counter, that enhances your IDE with the capability to count lines in the currently selected file.</b>
+        <br>
+        <br>
+        Simply right-click a file in the 'Project' tool window, and select 'Count Lines' from the context menu.
+        <br>
+        Actions:
+        <br>
+        <ul>
+            <li>
+                <b>Count Lines</b>: Line Counter provides a simple and effective way to keep track of your project's size and complexity.
+            </li>
+        </ul>
+        <br>
+        This plugin does not contain any third-party trademarks, it does not infringe on any copyrights and does not replicate any existing functionality.
+        ]]></description>
+
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <!-- Add action to Editor Right Click Popup Menu -->
+        <group id="FileAnalyzer.FileAnalyzerMenu"
+               text="_File Analyzer"
+               description="File analyzer submenu">
+            <add-to-group group-id="ProjectViewPopupMenu"
+                          anchor="last"/>
+            <action
+                id="FileAnalyzer.CountLinesAction"
+                class="com.sercheo.fileanalyzer.CountLinesAction"
+                icon="/icons/line-height.svg"
+                text="Count Lines"
+                description="Count lines in the current file"/>
+        </group>
+    </actions>
+
+    <!-- Add your actions here -->
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+</idea-plugin>
