@@ -14,7 +14,9 @@ class CountLinesAction : AnAction() {
         val file = e.getData(PlatformDataKeys.VIRTUAL_FILE)
 
         if (file != null && file.isValid) {
-            countLines(project, file)
+            val lines = countLines(project, file)
+            val size = getSizeFile(file)
+            Messages.showMessageDialog(project, "The selected file has $lines lines and your size is $size.", "Lines Count", Messages.getInformationIcon())
         } else {
             Messages.showMessageDialog(project, "No file selected!", "Information", Messages.getInformationIcon())
         }
@@ -29,12 +31,22 @@ class CountLinesAction : AnAction() {
         e.presentation.isEnabledAndVisible = visible
     }
 
-    private fun countLines(project: com.intellij.openapi.project.Project, file: VirtualFile) {
+    private fun countLines(project: com.intellij.openapi.project.Project, file: VirtualFile): String {
         val document = com.intellij.openapi.fileEditor.FileDocumentManager.getInstance().getDocument(file)
 
         if (document != null) {
-            val lines = formatNumber(document.lineCount)
-            Messages.showMessageDialog(project, "The selected file has $lines lines.", "Lines Count", Messages.getInformationIcon())
+            return formatNumber(document.lineCount)
+        }
+
+        return "0"
+    }
+
+    private fun getSizeFile(file: VirtualFile): String {
+        val size = file.length
+        return when {
+            size < 1024 -> formatNumber(size.toInt()) + " B"
+            size < 1024 * 1024 -> formatNumber((size / 1024).toInt()) + " KB"
+            else -> formatNumber((size / 1024 / 1024).toInt()) + " MB"
         }
     }
 
