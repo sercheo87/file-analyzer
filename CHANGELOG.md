@@ -2,7 +2,13 @@
 
 # File Analyzer Changelog
 
-## [Unreleased]
+## [Released]
+
+## [1.0.2] - 2024-10-11
+
+### Changed
+
+- Support for JetBrains Plugin SDK 2024.2
 
 ## [1.0.1] - 2024-05-11
 
@@ -17,7 +23,9 @@
 
 - Initial project scaffold
 
-[Unreleased]: https://github.com/sercheo87/file-analyzer/commits/v1.0.1..HEAD
+[Released]: https://github.com/sercheo87/file-analyzer/commits/v1.0.2..HEAD
+
+[1.0.2]: https://github.com/sercheo87/file-analyzer/commits/v1.0.1..v1.0.2
 
 [1.0.1]: https://github.com/sercheo87/file-analyzer/commits/v1.0-SNAPSHOT..v1.0.1
 

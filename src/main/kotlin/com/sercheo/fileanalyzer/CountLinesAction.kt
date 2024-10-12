@@ -1,5 +1,6 @@
 package com.sercheo.fileanalyzer
 
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.PlatformDataKeys
@@ -29,6 +30,10 @@ class CountLinesAction : AnAction() {
         val visible = project != null && selectedFiles != null && selectedFiles.size == 1 && !selectedFiles[0].isDirectory
 
         e.presentation.isEnabledAndVisible = visible
+    }
+
+    override fun getActionUpdateThread(): ActionUpdateThread {
+        return ActionUpdateThread.BGT
     }
 
     private fun countLines(project: com.intellij.openapi.project.Project, file: VirtualFile): String {
