@@ -4,6 +4,12 @@
 
 ## [Released]
 
+## [1.0.3] - 2025-01-17
+
+### Changed
+
+- Support for JetBrains Plugin SDK 2024.3
+
 ## [1.0.2] - 2024-10-11
 
 ### Changed
@@ -24,6 +30,8 @@
 - Initial project scaffold
 
 [Released]: https://github.com/sercheo87/file-analyzer/commits/v1.0.2..HEAD
+
+[1.0.3]: https://github.com/sercheo87/file-analyzer/commits/v1.0.2..v1.0.3
 
 [1.0.2]: https://github.com/sercheo87/file-analyzer/commits/v1.0.1..v1.0.2
 
