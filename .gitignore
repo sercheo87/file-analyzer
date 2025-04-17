@@ -102,3 +102,7 @@ gradle-app.setting
 
 .idea/
 
+/.intellijPlatform/localPlatformArtifacts/IC-251.23774.435/bundledPlugin-com.intellij.java-IC-251.23774.435.xml
+/.intellijPlatform/coroutines-javaagent.lock
+/.intellijPlatform/self-update.lock
+/.kotlin/sessions/kotlin-compiler-10321038470920949900.salive

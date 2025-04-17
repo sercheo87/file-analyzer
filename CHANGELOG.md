@@ -4,6 +4,18 @@
 
 ## [Released]
 
+## [2.0.0] - 2025-04-16
+
+### Changed
+
+- Support for JetBrains Plugin SDK 2025.1
+- Updated Kotlin version to 2.0.0 for compatibility with IntelliJ IDEA 2025.1
+- Updated sinceBuild to 251 to match the target IntelliJ Platform major version
+
+### Fixed
+
+- Fixed potential IndexOutOfBoundsException in CountLinesAction when handling empty file selections
+
 ## [1.0.4] - 2025-01-17
 
 ### Changed

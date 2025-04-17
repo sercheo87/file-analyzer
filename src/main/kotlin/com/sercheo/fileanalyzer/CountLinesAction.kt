@@ -27,7 +27,7 @@ class CountLinesAction : AnAction() {
         val project = e.project
         val selectedFiles = e.getData(PlatformDataKeys.VIRTUAL_FILE_ARRAY)
 
-        val visible = project != null && selectedFiles != null && selectedFiles.size == 1 && !selectedFiles[0].isDirectory
+        val visible = project != null && selectedFiles != null && selectedFiles.isNotEmpty() && selectedFiles.size == 1 && !selectedFiles[0].isDirectory
 
         e.presentation.isEnabledAndVisible = visible
     }
