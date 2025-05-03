@@ -6,7 +6,7 @@
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>File Analyzer</name>
-    <version>2.0.0</version>
+    <version>2.0.5</version>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="chancaysergio@gmail.com" url="https://github.com/sercheo87">Sercheo</vendor>

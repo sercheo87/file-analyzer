@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.sercheo"
-version = "2.0.4"
+version = "2.0.5"
 
 repositories {
     mavenCentral()
@@ -27,7 +27,7 @@ intellijPlatform {
 
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "251"
+            sinceBuild = "252"
         }
     }
     pluginVerification {
