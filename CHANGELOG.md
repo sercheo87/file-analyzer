@@ -4,6 +4,12 @@
 
 ## [Released]
 
+## [3.0.0] - 2025-08-05
+
+### Changed
+
+- Support for JetBrains Plugin SDK 2025.2
+
 ## [2.0.5] - 2025-05-03
 
 ### Changed

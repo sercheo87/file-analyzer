@@ -1,11 +1,11 @@
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "2.0.0"
+    id("org.jetbrains.kotlin.jvm") version "2.2.0"
     id("org.jetbrains.intellij.platform") version "2.5.0"
 }
 
 group = "com.sercheo"
-version = "2.0.5"
+version = "3.0.0"
 
 repositories {
     mavenCentral()
@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaCommunity("2025.1")
+        intellijIdeaCommunity("2025.2")
         bundledPlugin("com.intellij.java")
     }
 }
@@ -45,8 +45,8 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("251")
-        untilBuild.set("251.*")
+        sinceBuild.set("252")
+        untilBuild.set("252.*")
     }
 
     signPlugin {
